@@ -1,0 +1,175 @@
+Device Found
+  type: 0da4 0003
+  path: 0008:000f:00
+  serial_number: C005P7060138481
+  Manufacturer: POLAR Electro Oy
+  Product:      FLOWLink
+  Release:      0
+  Interface:    0
+
+Manufacturer String: POLAR Electro Oy
+Product String: FLOWLink
+Serial Number String: (67) C005P7060138481
+Indexed String 1: POLAR Electro Oy
+Feature Report
+PR=Present??? 04 0a-yes, 02 0b-no
+bolj status report
+	 PR       MODEL ID
+   11 00 04 0a 00 0d 00 7d 0b 08 00 00 00 00 00 00 00 00 00 00 00 43 08 05 09 01 0c 00 00 00 00 10 05 06 f5 0e 80 0c 00 00 00 38 55 01 43 10 02 42 00 01 00 15 02 00 55 02 00 00 00 01 00 0d 00 00 
+waiting...
+Data read:
+TN=number of trainings
+				    TN
+   11 00 3c 00 00 02 00 83 06 02 00 07 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a7 41 5d 0b f2 50 4d 00 
+waiting...
+Data read:
+   11 01 3d 10 00 00 00 72 03 46 5e 91 a7 41 5d 0b f2 50 4d af 64 0a 5c 83 06 02 00 00 30 03 01 0b 00 00 00 0a 0d 27 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data read:
+   11 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 af 64 0a 5c 83 06 02 00 00 30 03 01 0b 00 00 00 0a 0d 27 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+WE1,WE2=weight in lbs*10 (WE2<<8+WE1)???
+HE=height???
+BD=birth day
+BM=birth month
+BY=birth year???
+MH=maximum heart rate???
+VO=VO2MAX
+AC=Activity
+SX=Sex ??
+mm,hh,DD,MM,YY = information on when data was edited.
+Data read:        WE1WE2HE BD BM BY SX AC VO MH          mm hh DD MM YY --------------------------------------------
+   11 00 14 0e 00 59 07 b7 18 0a 50 00 02 36 c0 45 06 28 08 13 0e 01 0c 83 06 02 00 00 30 03 01 0b 00 00 00 0a 0d 27 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data read:
+            To    No ST MT UT Sd Sm SY SS SM SU    S1 M1 U1 S2 M2 U2 S3 M3 U3 1L 1H 2L 2H 3L 3H C1 C2 FB AV MX MH
+   11 00 2a 06 00 00 07 45 00 03 01 0c 19 04 21 23 36 05 00 20 21 00 38 17 00 73 85 86 99 9a ad 31 02 0e 93 a7 bd 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data read:
+            To    No ST MT UT Sd Sm SY SS SM SU    S1 M1 U1 S2 M2 U2 S3 M3 U3 1L 1H 2L 2H 3L 3H C1 C2 FB AV MX MH
+   11 00 2a 06 00 01 50 05 01 0a 01 0c 55 13 20 32 29 02 00 22 30 00 59 32 00 71 83 84 96 97 aa 52 03 0c 95 a5 bd 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data read:
+            To    No ST MT UT Sd Sm SY SS SM SU    S1 M1 U1 S2 M2 U2 S3 M3 U3 1L 1H 2L 2H 3L 3H C1 C2 FB AV MX MH
+   11 00 2a 06 00 02 57 29 00 0c 01 0c 52 57 18 12 38 18 00 09 11 00 00 00 00 73 85 86 99 9a ad 57 01 19 83 91 c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data read: To=Total of all trainings???, No=Number of training (starting from 0). 
+Sm=StartMonth in hex, Sd=StartDay in hex, SY=StartYear in hex, SS=StartSecond???, 
+SM=StartMinute, SU=StartHour, ST=Sekunde Total, MT= Minute Total, UT= UreTotal, 
+FB=Fat burn procetage in hex, AV=average heart rate in hex, MX=maximum heart rate in hex.
+1L=Low heart rate for zone 1
+1H=High heart rate zor zone 1
+2L=Low heart rate for zone 2
+2H= High heart rate for zone 2
+C1, C2= Calories: C2<<256+C1
+MH=Max Heart Rate
+
+            To    No ST MT UT Sd Sm SY SS SM SU    S1 M1 U1 S2 M2 U2 S3 M3 U3 1L 1H 2L 2H 3L 3H C1 C2 FB AV MX MH
+   11 00 2a 06 00 03 26 42 00 0c 01 0c 53 29 19 20 21 09 00 24 29 00 23 03 00 73 85 86 99 9a ad 21 02 13 8b b4 c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data read:
+            To    No ST MT UT Sd Sm SY SS SM SU    S1 M1 U1 S2 M2 U2 S3 M3 U3 1L 1H 2L 2H 3L 3H C1 C2 FB AV MX MH
+   11 00 2a 06 00 04 02 27 00 0c 01 0c 44 19 21 10 24 21 00 34 04 00 00 00 00 73 85 86 99 9a ad fb 00 1f 78 90 c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data read:
+            To    No ST MT UT Sd Sm SY SS SM SU    S1 M1 U1 S2 M2 U2 S3 M3 U3 1L 1H 2L 2H 3L 3H C1 C2 FB AV MX MH
+   11 00 2a 06 00 05 51 09 01 0d 01 0c 10 07 20 12 44 48 00 07 21 00 00 00 00 73 85 86 99 9a ad 25 03 19 83 91 c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data read:
+            To    No ST MT UT Sd Sm SY SS SM SU    S1 M1 U1 S2 M2 U2 S3 M3 U3 1L 1H 2L 2H 3L 3H C1 C2 FB AV MX MH
+   11 00 2a 06 00 06 37 13 01 0e 01 0c 30 55 16 23 02 15 00 07 34 00 20 24 00 73 85 86 99 9a ad 0b 04 10 92 a9 c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+---- Incomplete dump ----
+
+Data received:
+NO=number of measurements, Dates of measurements vo2max., VOmax, minutes and hours
+
+                  NO 03 01 12 VO mm hh 10 01 12 VO mm hh 11 01 12 VO mm hh 14 01 12 VO mm hh 14 01 12 VO mm hh
+   11 00 21 01 00 05 03 01 0c 2e 19 20 0a 01 0c 2d 28 19 0b 01 0c 35 13 08 0e 01 0c 37 15 10 0e 01 0c 36 07 13 c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data received:
+   11 00 31 04 00 01 2e 00 73 07 05 06 02 7d 04 fc 07 00 00 80 0c 00 15 02 00 55 02 00 00 00 36 01 00 00 00 00 71 84 97 aa 07 11 00 00 5b 17 00 00 ac 1d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+Data received: Active program!!!
+WTCAL=Week Target calories (program)???
+Z1 TT = zone1 target time. ss possibly denotes seconds.
+Z2 TT = zone2 target time. ss possibly denotes seconds.
+Z3 TT = zone3 target time? ss possibly denotes seconds.
+                                                            WTCAL ss TT Z1 ss Z2 TT ss Z3 TT 
+   11 00 31 04 00 01 2e 00 73 07 05 06 02 7d 04 fc 07 00 00 80 0c 00 15 02 00 55 02 00 00 00 36 01 00 00 00 00 71 84 97 aa 07 11 00 00 5b 17 00 00 ac 1d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+waiting...
+
+Data received:
+MO=more data to folow (01), no more data (00)
+
+      MO                      01 12 08-07 12 08                                                                                                          08 12 08-14 12 08
+   11 01 3d 14 40 10 00 00 00 01 0c 08 07 0c 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 0c 08 0e 0c 08 00 00 00 00 00 00 00 00 
+Data received:
+                                                                                             15 12 08-21 12 08
+   11 01 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 0c 08 15 0c 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data received:
+                                 22 12 08-28 12 08                                                                                                          29 12 08-04 01 09
+   11 01 3d 00 00 00 00 00 00 00 16 0c 08 1c 0c 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1d 0c 08 04 01 09 00 00 00 00 00 00 00 
+Data received:
+                                                                                                05 01 09-11 01 09
+   11 01 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 01 09 0b 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data received:
+                                    12 01 09                                                    05 01 09-11 01 09
+   11 00 0b 00 00 00 00 00 00 00 00 0c 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 01 09 0b 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+waiting...
+Data received:
+                  18 01 09                                                                                                          19 01 09-25 01 09
+   11 01 3d 14 40 12 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 01 09 19 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data received:                                                          26 01 09-01 02 09
+   11 01 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 01 09 01 02 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data received:
+            02 02 09-08 02 09                                                                                                          09 02 09-08 01 12
+   11 01 3d 02 02 09 08 02 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 49 00 09 02 09 08 01 0c 00 00 00 03 36 02 00 00 00 00 00 36 05 00 
+Data received:
+WTCAL=Week Target calories (program)
+WACAL=Week Achieved calories (program)
+Z1 AT = zone1 achieved time. ss possibly denotes seconds.
+Z2 AT = zone2 achieved time. ss possibly denotes seconds.
+Z3 AT = zone3 achieved time? ss possibly denotes seconds.
+Z1 TT = zone1 target time. ss possibly denotes seconds.
+Z2 TT = zone2 target time. ss possibly denotes seconds.
+Z3 TT = zone3 target time? ss possibly denotes seconds.
+                                                                           09 01 12-                     WACAL WTCAL          ss Z1 AT ss Z2 AT ss Z3 AT ss TT Z1 ss Z2 TT ss Z3 TT 
+   11 01 3d 20 21 00 38 17 00 00 00 00 00 00 00 00 00 00 00 00 00 33 16 06 09 01 0c 00 00 00 00 10 05 08 2f 12 80 0c 00 00 00 08 16 02 32 56 02 42 00 01 00 15 02 00 55 02 00 00 00 01 00 0d 00 00 
+Data received:
+               03 11 08-09 11 08                                           09 01 12
+   11 00 0b 00 03 0b 08 09 0b 08 00 00 00 00 00 00 00 00 00 00 00 33 16 06 09 01 0c 00 00 00 00 10 05 08 2f 12 80 0c 00 00 00 08 16 02 32 56 02 42 00 01 00 15 02 00 55 02 00 00 00 01 00 0d 00 00 
+
+
+Last two on finished week:
+Data received:
+                                                                           09 01 12-10 01 12             WACAL WTCAL          ss Z1 AT ss Z2 AT ss Z3 AT ss TT Z1 ss Z2 TT ss Z3 TT 
+   11 01 3d 20 21 00 38 17 00 00 00 00 00 00 00 00 00 00 00 00 00 33 16 06 09 01 0c 0f 01 0c 00 10 05 08 2f 12 80 0c 00 00 00 08 16 02 32 56 02 42 00 01 00 15 02 00 55 02 00 00 00 01 05 0a 00 00 
+Data received:
+               10 01 12                                                                                  WACAL WTCAL          ss Z1 AT ss Z2 AT ss Z3 AT ss TT Z1 ss Z2 TT ss Z3 TT
+   11 00 0b 00 10 01 0c 00 00 00 00 10 05 00 00 00 00 00 00 00 00 33 16 06 09 01 0c 0f 01 0c 00 10 05 08 2f 12 80 0c 00 00 00 08 16 02 32 56 02 42 00 01 00 15 02 00 55 02 00 00 00 01 05 0a 00 00
+
+On another training:
+Data received:
+   11 01 3d 14 40 10 00 00 00 01 0c 08 07 0c 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 08 0c 08 0e 0c 08 00 00 00 00 00 00 00 00 
+Data received:
+   11 01 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 0c 08 15 0c 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data received:
+   11 01 3d 00 00 00 00 00 00 00 16 0c 08 1c 0c 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1d 0c 08 04 01 09 00 00 00 00 00 00 00 
+Data received:
+   11 01 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 01 09 0b 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data received:
+   11 00 0b 00 00 00 00 00 00 00 00 0c 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 01 09 0b 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+waiting...
+Data received:
+   11 01 3d 14 40 12 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 01 09 19 01 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data received:
+   11 01 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 01 09 01 02 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Data received:
+   11 01 3d 02 02 09 08 02 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 24 49 00 09 02 09 08 01 0c 00 00 00 03 36 02 00 00 00 00 00 36 05 00 
+Data received:
+   11 01 3d 20 21 00 38 17 00 00 00 00 00 00 00 00 00 00 00 00 00 33 16 06 09 01 0c 0f 01 0c 00 10 05 08 2f 12 80 0c 00 00 00 08 16 02 32 56 02 42 00 01 00 15 02 00 55 02 00 00 00 01 05 0a 15 32 
+Data received:
+   11 00 0b 01 10 01 0c 00 00 00 00 10 05 01 00 00 00 00 00 00 00 33 16 06 09 01 0c 0f 01 0c 00 10 05 08 2f 12 80 0c 00 00 00 08 16 02 32 56 02 42 00 01 00 15 02 00 55 02 00 00 00 01 05 0a 15 32 
+

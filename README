@@ -1,0 +1,10 @@
+
+How to compile?
+
+cd ./src
+make
+
+
+Requirements: libusb-dev
+
+Part of package includes hidapi project.
