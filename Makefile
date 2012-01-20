@@ -6,7 +6,7 @@ CFLAGS   ?= -Wall -g
 CXX      ?= g++
 CXXFLAGS ?= -Wall -g
 
-COBJS     = hid-libusb.o polar.o protocol.o parse_data.o
+COBJS     = src/hid-libusb.o src/polar.o src/protocol.o src/parse_data.o
 CPPOBJS   = 
 OBJS      = $(COBJS) $(CPPOBJS)
 LIBS      = `pkg-config libusb-1.0 libudev --libs`
@@ -14,7 +14,7 @@ INCLUDES ?= `pkg-config libusb-1.0 --cflags`
 
 
 polar: $(OBJS)
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ $(LIBS) -o polar
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ $(LIBS) -o ./bin/polar
 
 $(COBJS): %.o: %.c
 	$(CC) $(CFLAGS) -c $(INCLUDES) $< -o $@

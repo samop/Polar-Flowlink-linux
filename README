@@ -1,10 +1,15 @@
+* Supported OS
 
-How to compile?
+GNU/Linux
 
-cd ./src
-make
+* How to compile
 
+in command line run: make
 
-Requirements: libusb-dev
+* Requirements: 
 
-Part of package includes hidapi project.
+libusb-dev
+
+* Inclusion of files from other authors
+
+Part of package includes hidapi project. I have to read some documents on how to include files from other project and not violating GPL. I have definitely violated it unintentinally. This problem has to be solved before I go public.
