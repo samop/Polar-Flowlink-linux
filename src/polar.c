@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include "protocol.h"
 #include "parse_data.h"
+#include "database.h"
 
 int main(int argc, char* argv[])
 {
@@ -14,6 +15,7 @@ int main(int argc, char* argv[])
 //	wchar_t wstr[MAX_STR];
 	hid_device *handle;
 	int i, n,present;
+	PGconn *db;
 	unsigned char cmd1[256]={0x01,0x00,0x02,0x00,0x00};
 	unsigned char cmd2[256]={0x01,0x00,0x02,0x10,0x00};
 	unsigned char cmdusr[256]={0x01,0x00,0x02,0x0E,0x00};
@@ -24,12 +26,20 @@ int main(int argc, char* argv[])
 	unsigned char cmd6[256]={0x01,0x00,0x02,0x14,0x20};
 	unsigned char cmd7[256]={0x01,0x00,0x02,0x14,0x30};
 	//struct hid_device_info *devs, *cur_dev;
+	
+	db=1;
+	if(test_db_connection("samo")){
+		db=NULL;
+	} else {
+		db=connect_db("samo");
+	}
 
 	handle=openHID(0x0da4,0x0003);
 	if(handle==NULL){
 		printf("Error, could not connect to Polar FlowLink. Is Flowlink connected and do you have priviledges?\n");
 		exit(1);
 	}
+
 	present=poolPresence(handle);
 	if(present){
 //		usleep(500*1000);
@@ -41,12 +51,12 @@ int main(int argc, char* argv[])
 //		usleep(500*1000);
 		printf("Great, let's get personal data!");
 		executeCommand1(handle,buf,256,cmdusr,5, FALSE);
-		parseUserData(buf,256);
+		parseUserData(buf,256, db);
 		printf("Let's get training data!");	
 		for(i=0;i<n;i++){
 		cmdtrain[5]=i;
 		executeCommand1(handle,buf,256,cmdtrain,6, FALSE);
-		parseTrainingData(buf,256);
+		parseTrainingData(buf,256,db);
 		}
 		executeCommand1(handle,buf,256,cmd3,5, FALSE);
 		parseVO2maxMeasurements(buf,256);

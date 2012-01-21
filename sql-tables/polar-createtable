@@ -1,0 +1,43 @@
+CREATE SEQUENCE training_id_seq;
+CREATE SEQUENCE user_data_id_seq;
+CREATE SEQUENCE vo2table_id_seq;
+
+CREATE TABLE user_data(
+	user_data_id integer PRIMARY KEY default nextval('user_data_id_seq'),
+	user_data_changed timestamp UNIQUE default now(),
+	weight float,
+	height integer,
+	birthdate date,
+	sex integer,
+	activity integer,
+	vo2max integer,
+	hrmax integer
+);
+
+CREATE TABLE training(
+	training_id integer PRIMARY KEY default nextval('training_id_seq'),
+	training_number integer default NULL,
+	training_data_md5 character(32) UNIQUE,
+	duration interval,
+	start_time timestamp default now(),
+	time_in_zone_1 interval,
+	time_in_zone_2 interval,
+	time_in_zone_3 interval,
+	Z1HRL integer,
+	Z1HRH integer,
+	Z2HRL integer,
+	Z2HRH integer,
+	Z3HRL integer,
+	Z3HRH integer,
+	avg_hr integer,
+	max_hr integer,
+	hrmax integer,
+	calories integer,
+	fat_burn integer
+);
+
+CREATE TABLE vo2table(
+	vo2table_id integer PRIMARY KEY default nextval('vo2table_id_seq'),
+	measurement_time time,
+	vo2max integer	
+);
