@@ -8,8 +8,13 @@ in command line run: make
 
 * Requirements: 
 
-libusb-dev
+libusb-dev, libudev-dev, libpq-dev
+
+For database handling postgresql server is also required. psql client is recommended for debugging purposes.
 
 * Inclusion of files from other authors
 
 Part of package includes hidapi project. I have to read some documents on how to include files from other project and not violating GPL. I have definitely violated it unintentinally. This problem has to be solved before I go public.
+
+* TODO
+Web page with simple analysis.
