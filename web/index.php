@@ -103,6 +103,7 @@ function drawBar(div, group){
         data.addColumn('number', 'Average HR');
         data.addColumn('number', 'Maximal HR');
         data.addColumn('number', 'Calories');
+        data.addColumn('number', 'Calories Est.');
 	if(group==0){
       data.addRows(
 <?php
@@ -122,8 +123,12 @@ function drawBar(div, group){
 		    5: {targetAxisIndex:1,
 			type: "line"},
 		    6: {targetAxisIndex:2,
+			type: "line"},
+		    7: {targetAxisIndex:2,
 			type: "line"}
-		} 
+		},
+	   vAxes: {1: {textPosition: "in"} 
+		}
        };
 	} else if(group==1){
       data.addRows(
@@ -144,8 +149,12 @@ function drawBar(div, group){
 		    5: {targetAxisIndex:1,
 			type: "line"},
 		    6: {targetAxisIndex:2,
+			type: "line"},
+		    7: {targetAxisIndex:2,
 			type: "line"}
-		} 
+		} ,
+	   vAxes: {1: {textPosition: "in"} 
+		}
        };
        } else {
       data.addRows(
@@ -166,8 +175,13 @@ function drawBar(div, group){
 		    5: {targetAxisIndex:1,
 			type: "line"},
 		    6: {targetAxisIndex:2,
+			type: "line"},
+		    7: {targetAxisIndex:2,
 			type: "line"}
-		} 
+
+		} ,
+	   vAxes: {1: {textPosition: "in"} 
+		}
        };
        }
 
@@ -190,6 +204,7 @@ function drawBar(div, group){
     <div id="chart4_div"></div>
     <div id="chart5_div"></div>
     <div id="chart6_div"></div>
+	<font size=-2>Estimated calories spent use formula from: Keytel LR, Goedecke JH, Noakes TD, Hiiloskorpi H, Laukkanen R, van der Merwe L, Lambert EV. Prediction of energy expenditure from heart rate monitoring during submaximal exercise. J Sports Sci. 2005 Mar;23(3):289-97. PubMed PMID: 15966347.</font>
 
   </body>
 </html>
