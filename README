@@ -14,7 +14,11 @@ For database handling postgresql server is also required. psql client is recomme
 
 * Inclusion of files from other authors
 
-Part of package includes hidapi project. I have to read some documents on how to include files from other project and not violating GPL. I have definitely violated it unintentinally. This problem has to be solved before I go public.
+Part of package includes hidapi project, licensed under GPLv3, BSD and HIDAPI license. Terms under GPLv3 are chosen in this project.
+
+* License
+
+This work is licenced under GPL v3 or later. Please read LICENSE for more information.
 
 * TODO
 Web page with simple analysis.

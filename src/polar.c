@@ -26,6 +26,25 @@ int main(int argc, char* argv[])
 	unsigned char cmd6[256]={0x01,0x00,0x02,0x14,0x20};
 	unsigned char cmd7[256]={0x01,0x00,0x02,0x14,0x30};
 	//struct hid_device_info *devs, *cur_dev;
+
+printf("polar -- simple polar FT60 HRM FlowLink transfer into database and basic html analysis\n\n\
+    Copyright (C) 2012  Samo Penic <samo.penic@opensarm.si>\n\n\\
+\
+    This program is free software: you can redistribute it and/or modify\n\
+    it under the terms of the GNU General Public License as published by\n\
+    the Free Software Foundation, either version 3 of the License, or\n\
+    (at your option) any later version.\n\n\
+\
+    This program is distributed in the hope that it will be useful,\n\
+    but WITHOUT ANY WARRANTY; without even the implied warranty of\n\
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n\
+    GNU General Public License for more details.\n\n\
+\
+    You should have received a copy of the GNU General Public License\n\
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.\n\n\n\
+");
+
+
 	
 	db=1;
 	if(test_db_connection("samo")){
@@ -36,7 +55,7 @@ int main(int argc, char* argv[])
 
 	handle=openHID(0x0da4,0x0003);
 	if(handle==NULL){
-		printf("Error, could not connect to Polar FlowLink. Is Flowlink connected and do you have priviledges?\n");
+		printf("Error, could not connect to Polar FlowLink. Is Flowlink connected and do you have privileges? Maybe you should suid the program?\n");
 		exit(1);
 	}
 
