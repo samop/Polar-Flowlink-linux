@@ -41,6 +41,8 @@
 	drawBar('chart4_div',1);
 	drawBar('chart5_div',0);
 	drawBar('chart6_div',2);
+	drawLoad('chart7_div',2);
+	drawLoadLine('chart8_div',2);
 	}
 	
       function drawPieZone(div,week){
@@ -190,6 +192,69 @@ function drawBar(div, group){
 
 
 }
+
+function drawLoad(div){
+
+    var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Date');
+        data.addColumn('number', 'Load');
+        data.addColumn('number', 'Calories');
+        data.addColumn('number', 'Calories Est.');
+      data.addRows(
+<?php
+	include_once "get_ctraining_load.php";
+	get_training_load(1);
+?>
+      );
+        var options = {
+		      'colors':['black', 'yellow','gray'],	
+          width: 1200, height: 300,
+	  isStacked: false,
+          title: 'Overview of training',
+          hAxis: {title: 'Date'},
+	   seriesType: "bars",
+           series: {1: {targetAxisIndex:1,
+			type: "line"},
+		    2: {targetAxisIndex:1,
+			type: "line"}
+		},
+	   vAxes: {1: {textPosition: "out"} 
+		}
+       };
+
+        var chart = new google.visualization.ComboChart(document.getElementById(div));
+        chart.draw(data, options);
+
+
+}
+
+function drawLoadLine(div){
+
+    var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Date');
+        data.addColumn('number', 'Low-Medium Load level');
+        data.addColumn('number', 'Medium-High Load level');
+        data.addColumn('number', 'Load');
+      data.addRows(
+<?php
+	include_once "get_ctraining_loadcurve2.php";
+	get_training_loadcurve(1);
+?>
+      );
+        var options = {
+		      'colors':['yellow','red','black'],	
+          width: 1200, height: 300,
+	  isStacked: false,
+          title: 'Overview of training',
+          hAxis: {title: 'Date'}
+       };
+
+        var chart = new google.visualization.LineChart(document.getElementById(div));
+        chart.draw(data, options);
+
+
+}
+
     </script>
   </head>
 
@@ -205,6 +270,9 @@ function drawBar(div, group){
     <div id="chart5_div"></div>
     <div id="chart6_div"></div>
 	<font size=-2>Estimated calories spent use formula from: Keytel LR, Goedecke JH, Noakes TD, Hiiloskorpi H, Laukkanen R, van der Merwe L, Lambert EV. Prediction of energy expenditure from heart rate monitoring during submaximal exercise. J Sports Sci. 2005 Mar;23(3):289-97. PubMed PMID: 15966347.</font>
+    <div id="chart7_div"></div>
+    <div id="chart8_div"></div>
+<font size=-2>Explained at <a href="http://westperformance.blogspot.com/2011/02/training-load-what-is-it-why-is-it.html">http://westperformance.blogspot.com/2011/02/training-load-what-is-it-why-is-it.html</a>, fitted by observing polarpersonaltrainer.com and finally adapted to closely match results in polarpersonalrtainer.</font>
 
   </body>
 </html>
