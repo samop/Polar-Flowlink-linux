@@ -6,6 +6,14 @@ GNU/Linux
 
 in command line run: make
 
+* Installing web page
+
+Requirements: apache2 with apache2-mod-php5 (or other web browser with php support), postgresql
+run postgresql as user postgres and add user as roles. create database and allow user to do anything with the database.
+As normal user type in: psql
+in psql \i sql-tables/polar-createtable
+copy directory web where it can be found by web browser.
+
 * Requirements: 
 
 libusb-dev, libudev-dev, libpq-dev

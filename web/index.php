@@ -129,7 +129,11 @@ function drawBar(div, group){
 		    7: {targetAxisIndex:2,
 			type: "line"}
 		},
-	   vAxes: {1: {textPosition: "in"} 
+	   vAxes: {
+		   1: {textPosition: "in",
+			title: "Heart rate/bpm"},
+		   2: {title: "Energy expenditure/Cal"},
+		   0: {title: "time/minutes"}
 		}
        };
 	} else if(group==1){
@@ -155,7 +159,11 @@ function drawBar(div, group){
 		    7: {targetAxisIndex:2,
 			type: "line"}
 		} ,
-	   vAxes: {1: {textPosition: "in"} 
+	   vAxes: {
+		   1: {textPosition: "in",
+			title: "Heart rate/bpm"},
+		   2: {title: "Energy expenditure/Cal"},
+		   0: {title: "time/minutes"}
 		}
        };
        } else {
@@ -182,7 +190,11 @@ function drawBar(div, group){
 			type: "line"}
 
 		} ,
-	   vAxes: {1: {textPosition: "in"} 
+	   vAxes: {
+		   1: {textPosition: "in",
+			title: "Heart rate/bpm"},
+		   2: {title: "Energy expenditure/Cal"},
+		   0: {title: "time/minutes"}
 		}
        };
        }
@@ -218,7 +230,10 @@ function drawLoad(div){
 		    2: {targetAxisIndex:1,
 			type: "line"}
 		},
-	   vAxes: {1: {textPosition: "out"} 
+	   vAxes: {1: {textPosition: "out",
+			title: "Energy expenditure/Cal"
+			},
+		   0: {title: "Load metrics"} 
 		}
        };
 
@@ -246,7 +261,8 @@ function drawLoadLine(div){
           width: 1200, height: 300,
 	  isStacked: false,
           title: 'Overview of training',
-          hAxis: {title: 'Date'}
+          hAxis: {title: 'Date'},
+	  vAxis: {title: 'Load metrics'}
        };
 
         var chart = new google.visualization.LineChart(document.getElementById(div));
