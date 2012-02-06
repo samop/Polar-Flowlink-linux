@@ -2,23 +2,35 @@
 
 GNU/Linux
 
+* Requirements: 
+
+For driver: libusb-dev, libudev-dev, libpq-dev
+
+For web interface: apache2 with apache2-mod-php5 (or other web browser with php support), postgresql
+
+For database handling postgresql server is also required. psql client is recommended for debugging purposes.
+
 * How to compile
 
 in command line run: make
 
 * Installing web page
 
-Requirements: apache2 with apache2-mod-php5 (or other web browser with php support), postgresql
-run postgresql as user postgres and add user as roles. create database and allow user to do anything with the database.
-As normal user type in: psql
-in psql \i sql-tables/polar-createtable
-copy directory web where it can be found by web browser.
+Run postgresql as user postgres and add user as role. Create database and allow user to do anything with the database. Basically you need to do (change <username> with your username):
+Run psql and within the psql shell type in:
+	create table <username>;
+	grant all privileges on database <username> to <username>;
 
-* Requirements: 
+I would also recommend:
+	grant all privileges on database <username> to root;
 
-libusb-dev, libudev-dev, libpq-dev
+Finish with
+	\q
 
-For database handling postgresql server is also required. psql client is recommended for debugging purposes.
+As normal user type in bash shell: psql
+	\i sql-tables/polar-createtable
+
+Copy directory web where it can be found by web browser. Edit config.php and enter your username and password required to access database.
 
 * Inclusion of files from other authors
 
@@ -29,4 +41,10 @@ Part of package includes hidapi project, licensed under GPLv3, BSD and HIDAPI li
 This work is licenced under GPL v3 or later. Please read LICENSE for more information.
 
 * TODO
-Web page with simple analysis.
+- Make a simple portal with excercise analysis. Make a better analyses and provide user feedback.
+
+- Parse training program data.
+
+- Parse data from footpod. I don't have it handy, so if you need this functionality consider lending me one ;).
+
+- Daemonize process of reading from flowlink.

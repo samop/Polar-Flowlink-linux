@@ -129,11 +129,12 @@ int readData(hid_device *handle, unsigned char *buf, int bufsize, int showdata){
 	for(i=1;i<5;i++) {
 		res = hid_read(handle, buf, bufsize*sizeof(unsigned char));
 		if (res > 1) break;
-		if (res == 0)
+		if (res == 0){
 			printf("waiting...\n");
+			usleep(500*1000);
+		}
 		if (res < 0)
 			printf("Unable to read()\n");
-		usleep(500*1000);
 	}
 	if (res<=0) {
 		printf("No data received!\n");
