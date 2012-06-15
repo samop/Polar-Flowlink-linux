@@ -12,7 +12,8 @@ For database handling postgresql server is also required. psql client is recomme
 
 * How to compile
 
-in command line run: make
+firstly create bin directory in the project tree: mkdir bin
+then run ``make'' in command line: make
 
 * Installing web page
 

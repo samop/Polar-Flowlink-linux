@@ -23,6 +23,6 @@ $(CPPOBJS): %.o: %.c
 	$(CXX) $(CXXFLAGS) -c $(INCLUDES) $< -o $@
 
 clean:
-	rm -f $(OBJS) polar
+	rm -f $(OBJS) ./bin/polar
 
 .PHONY: clean
