@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 	unsigned char cmd1[256]={0x01,0x00,0x02,0x00,0x00};
 	unsigned char cmd2[256]={0x01,0x00,0x02,0x10,0x00};
 	unsigned char cmdusr[256]={0x01,0x00,0x02,0x0E,0x00};
-	unsigned char cmdtrain[256]={0x01,0x00,0x03,0x06,0x00,0x00};
+	unsigned char cmdtrain[256]={0x01,0x00,0x04,0x06,0x00,0x00,0x01};
 	unsigned char cmd3[256]={0x01,0x00,0x02,0x01,0x00};
 	unsigned char cmd4[256]={0x01,0x00,0x02,0x04,0x00};
 	unsigned char cmd5[256]={0x01,0x00,0x02,0x14,0x00};
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 	unsigned char cmd7[256]={0x01,0x00,0x02,0x14,0x30};
 	//struct hid_device_info *devs, *cur_dev;
 
-printf("polar -- simple polar FT60 HRM FlowLink transfer into database and basic html analysis\n\n\
+printf("polar -- simple polar FT80 HRM FlowLink transfer into database and basic html analysis\n\n\
     Copyright (C) 2012  Samo Penic <samo.penic@opensarm.si>\n\n\\
 \
     This program is free software: you can redistribute it and/or modify\n\
@@ -74,7 +74,7 @@ printf("polar -- simple polar FT60 HRM FlowLink transfer into database and basic
 		printf("Let's get training data!");	
 		for(i=0;i<n;i++){
 		cmdtrain[5]=i;
-		executeCommand1(handle,buf,256,cmdtrain,6, FALSE);
+		executeCommand1(handle,buf,256,cmdtrain,7, FALSE);
 		parseTrainingData(buf,256,db);
 		}
 		executeCommand1(handle,buf,256,cmd3,5, FALSE);
