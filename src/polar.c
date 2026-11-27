@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 	//struct hid_device_info *devs, *cur_dev;
 
 printf("polar -- simple polar FT60 HRM FlowLink transfer into database and basic html analysis\n\n\
-    Copyright (C) 2012  Samo Penic <samo.penic@opensarm.si>\n\n\\
+    Copyright (C) 2012  Samo Penic <samo.penic@opensarm.si>\n\n\
 \
     This program is free software: you can redistribute it and/or modify\n\
     it under the terms of the GNU General Public License as published by\n\
@@ -46,11 +46,15 @@ printf("polar -- simple polar FT60 HRM FlowLink transfer into database and basic
 
 
 	
-	db=1;
-	if(test_db_connection("samo")){
+	const char *db_user = getenv("USER");
+	if (db_user == NULL || db_user[0] == '\0') {
+		db_user = "postgres";
+	}
+	db=NULL;
+	if(test_db_connection(db_user)){
 		db=NULL;
 	} else {
-		db=connect_db("samo");
+		db=connect_db(db_user);
 	}
 
 	handle=openHID(0x0da4,0x0003);

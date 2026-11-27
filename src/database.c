@@ -7,7 +7,7 @@ void close_db(PGconn *conn){
      PQfinish(conn);
 }
 
-PGconn *connect_db(char *database_name){
+PGconn *connect_db(const char *database_name){
 	PGconn     *conn;
     char *conninfo;
     conninfo=(char *)malloc(255*sizeof(char));
@@ -26,7 +26,7 @@ PGconn *connect_db(char *database_name){
 
 
 
-int test_db_connection(char *database_name){
+int test_db_connection(const char *database_name){
 	PGconn     *conn;
 
 	conn = connect_db(database_name);
