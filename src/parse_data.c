@@ -114,7 +114,7 @@ int parseTrainingData(unsigned char *buf, int bufsize, PGconn *db){
 	printf("in zone 3=%x:%x:%x'\n",buf[24],buf[23],buf[22]);
 	printf("Zone1 HR limits (%d,%d), Zone2 HR limits (%d,%d), Zone3 HR limits (%d,%d)\n",buf[25],buf[26],buf[27],buf[28],buf[29],buf[30]);
 	printf("Calories burned=%d\n",(buf[32]<<8)+buf[31]);
-	printf("Fat burn percentage=%d %\n",buf[33]);
+	printf("Fat burn percentage=%d %%\n",buf[33]);
 	printf("Average HR=%d\n", buf[34]);
 	printf("Max HR=%d\n",buf[35]);
 	printf("HRmax=%d\n", buf[36]);
